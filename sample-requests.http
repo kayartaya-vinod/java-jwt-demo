@@ -1,0 +1,55 @@
+POST /api/login
+Host: localhost:8080
+Content-Type: application/json
+
+{
+    "email": "vinod@vinod.co",
+    "password": "topsecret"
+}
+
+### invalid email/password
+
+POST /api/login
+Host: localhost:8080
+Content-Type: application/json
+
+{
+    "email": "vinod@sapient",
+    "password": "topsecret"
+}
+
+###
+GET /api/orders
+Host: localhost:8080
+
+
+###
+GET /api/orders
+Host: localhost:8080
+Accept: application/json
+Authorization: asdasdasd
+
+
+###
+GET /api/orders
+Host: localhost:8080
+Accept: application/json
+Authorization: asda sdasd.asd.asd
+
+### expired token
+GET /api/orders
+Host: localhost:8080
+Accept: application/json
+Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJWaW5vZCBLdW1hciBLYXlhcnRheWEiLCJpZCI6MTIzNCwiZXhwIjoxNjIwNDU0OTc3LCJpYXQiOjE2MjA0NTQwNzd9.yc3i3lre-AUyNB_CkQ1pB9x2ZeFFE_CtJt0JM0MZy4Y
+
+###
+GET /api/orders
+Host: localhost:8080
+Accept: application/json
+Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJWaW5vZCBLdW1hciBLYXlhcnRheWEiLCJpZCI6MTIzNCwiZXhwIjoxNjIwNTQxMjAwLCJpYXQiOjE2MjA1NDAzMDB9.VHrsS1hUz-qhymgglzwRRy6JX3gRqmZOpryySUAFXz0
+
+### TAMPERED JWT TOKEN
+GET /api/orders
+Host: localhost:8080
+Accept: application/json
+Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJWaW5vZCBLdW1hciBLYXlhcnRheWEiLCJpZCI6Nzg5MCwiZXhwIjoxNjIwNTQxMjAwLCJpYXQiOjE2MjA1NDAzMDB9.xItjxW9lAER28liiGu-BGigiYKNDWDrEcf0sxjw0k0c
