@@ -22,7 +22,6 @@ Content-Type: application/json
 GET /api/orders
 Host: localhost:8080
 
-
 ###
 GET /api/orders
 Host: localhost:8080
@@ -46,10 +45,18 @@ Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJWaW5vZCBLdW1h
 GET /api/orders
 Host: localhost:8080
 Accept: application/json
-Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJWaW5vZCBLdW1hciBLYXlhcnRheWEiLCJpZCI6MTIzNCwiZXhwIjoxNjIwNTU5Mjk2LCJpYXQiOjE2MjA1NTgzOTZ9.1dQReWGFWjZVqlO96ORjCKF_hr0TZX_lN4v_Csf_2lU
+Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJWaW5vZCBLdW1hciBLYXlhcnRheWEiLCJpZCI6MTIzNCwiZXhwIjoxNjIxMTU2MTA5LCJpYXQiOjE2MjExNTUyMDl9.5jWVfs79kKcxJsCmxLmmNELoGUk_ko9QYyELUP2psfA
 
 ### TAMPERED JWT TOKEN
 GET /api/orders
 Host: localhost:8080
 Accept: application/json
 Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJWaW5vZCBLdW1hciBLYXlhcnRheWEiLCJpZCI6Nzg5MCwiZXhwIjoxNjIwNTUyNzY1LCJpYXQiOjE2MjA1NTE4NjV9.4iDIeV4z3C1InYBNfhPD1K8yTnvbr7g_Xp0L90BbJjA
+
+
+####
+
+http://localhost:8080/api/products
+###
+
+http://localhost:8080/api/products/22

@@ -5,6 +5,7 @@ import java.util.Map;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import co.vinod.demo.dto.User;
 import co.vinod.demo.utils.JwtUtil;
 
+@CrossOrigin
 @RestController
 public class LoginController {
 
@@ -27,7 +29,7 @@ public class LoginController {
 			map.put("id", 1234); // need to get this from DB using DAO
 			map.put("fullname", "Vinod Kumar Kayartaya");
 			map.put("token", JwtUtil.createToken(1234, "Vinod Kumar Kayartaya"));
-			
+
 			return ResponseEntity.ok(map);
 		} else {
 			return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid email/password");

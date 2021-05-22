@@ -1,0 +1,51 @@
+<h2>Login required</h2>
+<form onsubmit="return submitLoginDetails()">
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input
+            type="email"
+            class="form-control"
+            id="email"
+            aria-describedby="emailHelp"
+        />
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password" />
+    </div>
+
+    <button class="btn btn-primary">Login to access your dashboard</button>
+</form>
+
+<ul id="plist"></ul>
+<script>
+    function submitLoginDetails() {
+        var email = $('#email').val();
+        var password = $('#password').val();
+
+        var payload = { email, password };
+
+        $.ajax({
+            method: 'POST',
+            data: JSON.stringify(payload),
+            url: 'http://localhost:8080/api/login',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        })
+            .then((resp) => {
+                localStorage.setItem('fullname', resp.fullname);
+                localStorage.setItem('token', resp.token);
+                location.href = './#dashboard';
+                loadView();
+                showHideUserOptions();
+            })
+            .catch((err) => {
+                alert(err.responseText);
+                $('input').val('');
+                $('#email').focus();
+            });
+
+        return false; // prevent the form being submitted to the server
+    }
+</script>

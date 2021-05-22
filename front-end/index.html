@@ -4,13 +4,14 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>D2D app</title>
+        <title>Demo application</title>
 
         <link rel="stylesheet" href="./lib/bootstrap/bootstrap.min.css" />
         <script src="./lib/jquery/jquery-3.6.0.js"></script>
         <script src="./lib/bootstrap/bootstrap.min.js"></script>
 
-        <script src="./src/all-products.js"></script>
+        <script src="./src/site.js"></script>
+        <script src="./src/one-product.js"></script>
         <script src="./src/one-product.js"></script>
     </head>
     <body>
@@ -20,13 +21,39 @@
             </div>
         </div>
 
+        <div id="header" class="container">
+            <p>header options like categories etc will appear here</p>
+        </div>
+
         <div class="container">
             <div class="row">
                 <div class="col-9">
                     <div id="view"></div>
                 </div>
                 <div class="col-3">
-                    <h3>Sidebar options</h3>
+                    <div id="visitorOptions">
+                        <button class="btn btn-primary" onclick="navigateTo('login')">
+                            Login
+                        </button>
+                    </div>
+
+                    <div id="userOptions">
+                        <button class="btn btn-primary" onclick="logout()">
+                            Logout
+                        </button>
+                        <br>
+                        <button class="btn btn-link" onclick="navigateTo('dashboard')"
+                            >Dashobard</a
+                        >
+                        <br>
+                        <button class="btn btn-link" onclick="navigateTo('profile')"
+                            >Profile</a
+                        >
+                        <br>
+                        <button class="btn btn-link" onclick="navigateTo('change-password')"
+                            >Change password</a
+                        >
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,0 +1,10 @@
+<h1>This is dashboard</h1>
+<hr />
+<h2>Hello <span id="fullname"></span>, welcome to your dashboard.</h2>
+
+<script>
+    var fullname = localStorage.getItem('fullname');
+    if (checkForLoggedInStatus()) {
+        $('#fullname').text(fullname);
+    }
+</script>
