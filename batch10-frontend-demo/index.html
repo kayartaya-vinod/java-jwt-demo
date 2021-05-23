@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Quizz app</title>
+
+        <link rel="stylesheet" href="./lib/bootstrap/bootstrap.min.css" />
+        <script src="./lib/jquery/jquery.min.js"></script>
+        <script src="./lib/bootstrap/bootstrap.min.js"></script>
+        <script src="./src/js/site.js"></script>
+    </head>
+    <body>
+        <div class="alert alert-primary">
+            <div class="container">
+                <h1>Quizz App</h1>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <ul class="list-group">
+                        <button
+                            onclick="navigateTo('home')"
+                            class="list-group-item"
+                        >
+                            Home</button
+                        ><button
+                            onclick="navigateTo('profile')"
+                            class="list-group-item"
+                        >
+                            Update profile</button
+                        ><button
+                            onclick="navigateTo('view-questions')"
+                            class="list-group-item"
+                        >
+                            View questions</button
+                        ><button
+                            onclick="navigateTo('view-reports')"
+                            class="list-group-item"
+                        >
+                            View reports</button
+                        ><button
+                            onclick="navigateTo('about-us')"
+                            class="list-group-item"
+                        >
+                            About us
+                        </button>
+                    </ul>
+                </div>
+                <div class="col-9">
+                    <div id="view">Main content here</div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
