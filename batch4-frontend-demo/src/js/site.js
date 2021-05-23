@@ -2,7 +2,6 @@ const cache = {};
 
 function navigateTo(path) {
     location.href = `./#${path}`;
-    loadView();
 }
 
 function loadView() {
@@ -21,9 +20,7 @@ function loadView() {
     }
 }
 
-$(function () {
-    loadView();
-});
+$(loadView);
 
 // handle back button
 $(window).on('popstate', loadView);
