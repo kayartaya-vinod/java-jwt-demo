@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Batch 4 demo</title>
+
+        <link rel="stylesheet" href="./lib/bootstrap/bootstrap.min.css" />
+        <script src="./lib/jquery/jquery.min.js"></script>
+        <script src="./lib/bootstrap/bootstrap.min.js"></script>
+        <script src="./src/js/site.js"></script>
+    </head>
+    <body>
+        <div class="alert alert-primary">
+            <div class="container">
+                <h1>Batch 4 demo app</h1>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <h3>Menu options</h3>
+                    <ul class="list-group">
+                        <button
+                            onclick="navigateTo('home')"
+                            class="list-group-item"
+                        >
+                            Home
+                        </button>
+                        <button
+                            onclick="navigateTo('profile')"
+                            class="list-group-item"
+                        >
+                            Profile
+                        </button>
+                        <button
+                            onclick="navigateTo('wishlist')"
+                            class="list-group-item"
+                        >
+                            Wishlist
+                        </button>
+                        <button
+                            onclick="navigateTo('order-history')"
+                            class="list-group-item"
+                        >
+                            Order history
+                        </button>
+                        <button
+                            onclick="navigateTo('sample-product')"
+                            class="list-group-item"
+                        >
+                            Sample product
+                        </button>
+                        <button
+                            onclick="navigateTo('about-us')"
+                            class="list-group-item"
+                        >
+                            About us
+                        </button>
+                    </ul>
+                </div>
+                <div class="col-9">
+                    <div id="view"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
