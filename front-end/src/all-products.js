@@ -8,7 +8,7 @@ var baseUrl = 'http://localhost:8080/api/';
 $(function () {
     var productsUrl = baseUrl + 'products';
 
-    // var token = sessionStorage.getItem('token');
+    // var token = localStorage.getItem('token');
     // if (token) {
     // make an ajax call to the rest server to get the data
     $.ajax(productsUrl, {
