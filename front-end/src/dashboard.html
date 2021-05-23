@@ -2,9 +2,4 @@
 <hr />
 <h2>Hello <span id="fullname"></span>, welcome to your dashboard.</h2>
 
-<script>
-    var fullname = localStorage.getItem('fullname');
-    if (checkForLoggedInStatus()) {
-        $('#fullname').text(fullname);
-    }
-</script>
+<script src="./src/dashboard.js"></script>

@@ -44,11 +44,11 @@ function showHideUserOptions() {
     }
 }
 
-function getMessage() {
+/* function getMessage() {
     var id = Math.round(1 + Math.random() * 75);
     var url = 'http://localhost:8080/api/products/' + id;
 
     $.get(url).then((p) => $('#plist').html('<li>' + p.name + '</li>'));
-}
+} */
 
-setInterval(getMessage, 1000);
+// setInterval(getMessage, 1000);
