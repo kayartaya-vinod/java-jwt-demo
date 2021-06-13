@@ -18,10 +18,9 @@ import co.vinod.demo.utils.JwtUtil;
 public class LoginController {
 
 	@PostMapping("/api/login")
-	public ResponseEntity<?> login(@RequestBody User user) throws Exception {
+	public ResponseEntity<Object> login(@RequestBody User user) throws Exception {
 
-		// TODO: make use of a DAO class to verify if the user's email and password are
-		// valid
+		// make use of a DAO class to verify if the user's email and password are valid
 		// temporary fix; hard coded email/password verification
 
 		if (user.getEmail().equals("vinod@vinod.co") && user.getPassword().equals("topsecret")) {
