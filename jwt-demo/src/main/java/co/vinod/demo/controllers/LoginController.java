@@ -12,13 +12,21 @@ import org.springframework.web.bind.annotation.RestController;
 
 import co.vinod.demo.dto.User;
 import co.vinod.demo.utils.JwtUtil;
+import lombok.extern.slf4j.Slf4j;
 
 @CrossOrigin
 @RestController
+@Slf4j
 public class LoginController {
 
 	@PostMapping("/api/login")
 	public ResponseEntity<Object> login(@RequestBody User user) throws Exception {
+
+		String name = "Vinod";
+		String city = "Bangalore";
+
+		log.info("name is {}", name);
+		log.info("city is {}", city);
 
 		// make use of a DAO class to verify if the user's email and password are valid
 		// temporary fix; hard coded email/password verification
